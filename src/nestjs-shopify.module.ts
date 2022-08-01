@@ -39,6 +39,7 @@ export class NestjsShopifyModule {
   ): DynamicModule {
     return {
       module: NestjsShopifyModule,
+      imports:options.imports || [],
       providers: [
         ...this.createProviders(options),
       ],
